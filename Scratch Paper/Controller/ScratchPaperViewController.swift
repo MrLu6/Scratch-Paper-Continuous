@@ -168,7 +168,10 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    
+    /**
+        This function aims to close the colorPanel with 0.1s delay time.
+     
+    */
     func delayPanelClose() {
         
         attribute.instance.colorPanelIsEnable = false
