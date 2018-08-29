@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2C7662720E99F5600334629 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7662620E99F5600334629 /* AppDelegate.swift */; };
+		E2C7662920E99F5600334629 /* ScratchPaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7662820E99F5600334629 /* ScratchPaperViewController.swift */; };
+		E2C7662C20E99F5600334629 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C7662A20E99F5600334629 /* Main.storyboard */; };
+		E2C7662F20E99F5600334629 /* Scratch_Paper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2C7662D20E99F5600334629 /* Scratch_Paper.xcdatamodeld */; };
+		E2C7663120E99F5700334629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7663020E99F5700334629 /* Assets.xcassets */; };
+		E2C7663420E99F5700334629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C7663220E99F5700334629 /* LaunchScreen.storyboard */; };
+		E2C7663E20E9E6EF00334629 /* ScratchPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7663D20E9E6EF00334629 /* ScratchPaperView.swift */; };
+		E2F4089C20ECC28000C7809C /* attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4089B20ECC28000C7809C /* attribute.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E2C7662320E99F5600334629 /* Scratch Paper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scratch Paper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2C7662620E99F5600334629 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E2C7662820E99F5600334629 /* ScratchPaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchPaperViewController.swift; sourceTree = "<group>"; };
+		E2C7662B20E99F5600334629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E2C7662E20E99F5600334629 /* Scratch_Paper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scratch_Paper.xcdatamodel; sourceTree = "<group>"; };
+		E2C7663020E99F5700334629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E2C7663320E99F5700334629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E2C7663520E99F5700334629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2C7663D20E9E6EF00334629 /* ScratchPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchPaperView.swift; sourceTree = "<group>"; };
+		E2F4089B20ECC28000C7809C /* attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attribute.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2C7662020E99F5600334629 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E216650520EE03A300EA4EB2 /* Supporting documents */ = {
+			isa = PBXGroup;
+			children = (
+				E2C7662620E99F5600334629 /* AppDelegate.swift */,
+				E2C7662A20E99F5600334629 /* Main.storyboard */,
+				E2C7663020E99F5700334629 /* Assets.xcassets */,
+				E2C7663220E99F5700334629 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting documents";
+			sourceTree = "<group>";
+		};
+		E2C7661A20E99F5600334629 = {
+			isa = PBXGroup;
+			children = (
+				E2C7662520E99F5600334629 /* Scratch Paper */,
+				E2C7662420E99F5600334629 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2C7662420E99F5600334629 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2C7662320E99F5600334629 /* Scratch Paper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2C7662520E99F5600334629 /* Scratch Paper */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4089820EC8B0D00C7809C /* Data Model */,
+				E2C7663C20E9E6C600334629 /* Views */,
+				E2C7663B20E9E69D00334629 /* Controller */,
+				E216650520EE03A300EA4EB2 /* Supporting documents */,
+				E2C7663520E99F5700334629 /* Info.plist */,
+			);
+			path = "Scratch Paper";
+			sourceTree = "<group>";
+		};
+		E2C7663B20E9E69D00334629 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2C7662820E99F5600334629 /* ScratchPaperViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E2C7663C20E9E6C600334629 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E2C7663D20E9E6EF00334629 /* ScratchPaperView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E2F4089820EC8B0D00C7809C /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2F4089B20ECC28000C7809C /* attribute.swift */,
+				E2C7662D20E99F5600334629 /* Scratch_Paper.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2C7662220E99F5600334629 /* Scratch Paper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2C7663820E99F5700334629 /* Build configuration list for PBXNativeTarget "Scratch Paper" */;
+			buildPhases = (
+				E2C7661F20E99F5600334629 /* Sources */,
+				E2C7662020E99F5600334629 /* Frameworks */,
+				E2C7662120E99F5600334629 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Scratch Paper";
+			productName = "Scratch Paper";
+			productReference = E2C7662320E99F5600334629 /* Scratch Paper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2C7661B20E99F5600334629 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "CHENGJUN LU";
+				TargetAttributes = {
+					E2C7662220E99F5600334629 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = E2C7661E20E99F5600334629 /* Build configuration list for PBXProject "Scratch Paper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2C7661A20E99F5600334629;
+			productRefGroup = E2C7662420E99F5600334629 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2C7662220E99F5600334629 /* Scratch Paper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2C7662120E99F5600334629 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C7663420E99F5700334629 /* LaunchScreen.storyboard in Resources */,
+				E2C7663120E99F5700334629 /* Assets.xcassets in Resources */,
+				E2C7662C20E99F5600334629 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2C7661F20E99F5600334629 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C7663E20E9E6EF00334629 /* ScratchPaperView.swift in Sources */,
+				E2C7662920E99F5600334629 /* ScratchPaperViewController.swift in Sources */,
+				E2C7662F20E99F5600334629 /* Scratch_Paper.xcdatamodeld in Sources */,
+				E2F4089C20ECC28000C7809C /* attribute.swift in Sources */,
+				E2C7662720E99F5600334629 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E2C7662A20E99F5600334629 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C7662B20E99F5600334629 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E2C7663220E99F5700334629 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2C7663320E99F5700334629 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2C7663620E99F5700334629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E2C7663720E99F5700334629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E2C7663920E99F5700334629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB36NUBE5M;
+				INFOPLIST_FILE = "Scratch Paper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CHENGJUN-LU.Scratch-Paper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E2C7663A20E99F5700334629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB36NUBE5M;
+				INFOPLIST_FILE = "Scratch Paper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CHENGJUN-LU.Scratch-Paper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2C7661E20E99F5600334629 /* Build configuration list for PBXProject "Scratch Paper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C7663620E99F5700334629 /* Debug */,
+				E2C7663720E99F5700334629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2C7663820E99F5700334629 /* Build configuration list for PBXNativeTarget "Scratch Paper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2C7663920E99F5700334629 /* Debug */,
+				E2C7663A20E99F5700334629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E2C7662D20E99F5600334629 /* Scratch_Paper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E2C7662E20E99F5600334629 /* Scratch_Paper.xcdatamodel */,
+			);
+			currentVersion = E2C7662E20E99F5600334629 /* Scratch_Paper.xcdatamodel */;
+			path = Scratch_Paper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E2C7661B20E99F5600334629 /* Project object */;
+}

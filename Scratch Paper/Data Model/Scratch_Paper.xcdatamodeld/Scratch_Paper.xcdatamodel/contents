@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DrawContext" representedClassName=".DrawContext" syncable="YES" codeGenerationType="class">
+        <attribute name="colorB" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="colorG" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="colorR" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mid1X" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" customClassName="(Float,Float)" syncable="YES"/>
+        <attribute name="mid1Y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mid2X" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mid2Y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" customClassName="(Float,Float)" syncable="YES"/>
+        <attribute name="numBrush" attributeType="Integer 16" defaultValueString="5" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numOpacity" optional="YES" attributeType="Float" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="previousPoint1X" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="previousPoint1Y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="TouchBeginPoint" representedClassName=".TouchBeginPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="TouchEndPoint" representedClassName="TouchEndPoint" syncable="YES" codeGenerationType="class">
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DrawContext" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="TouchBeginPoint" positionX="-45" positionY="81" width="128" height="75"/>
+        <element name="TouchEndPoint" positionX="-27" positionY="90" width="128" height="75"/>
+    </elements>
+</model>
