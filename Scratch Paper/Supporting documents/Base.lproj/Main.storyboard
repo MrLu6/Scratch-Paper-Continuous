@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-zN-Bhr" userLabel="ToolBar View" customClass="ToolBarView" customModule="Scratch_Paper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-zN-Bhr" userLabel="ToolBar View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -73,7 +73,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.94754986470000002" green="0.96993559600000001" blue="0.94128751460000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-Va-5Rb" userLabel="scrollView" customClass="scrollView" customModule="Scratch_Paper" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-Va-5Rb" userLabel="scrollView">
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -84,7 +84,7 @@
                                     </view>
                                 </subviews>
                             </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUF-vp-BNI" userLabel="ColorBrushOpcityPanel" customClass="ColorBrushOpcityPanel" customModule="Scratch_Paper" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUF-vp-BNI" userLabel="ColorBrushOpcityPanel">
                                 <rect key="frame" x="140" y="90" width="360" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>

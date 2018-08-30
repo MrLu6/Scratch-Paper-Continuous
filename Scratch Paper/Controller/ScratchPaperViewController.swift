@@ -28,23 +28,35 @@ class ScratchPaperViewController:UIViewController {
     
     @IBOutlet weak var toolBarView: UIView!
     
+    ///Use to display 
     @IBOutlet weak var ColorBrushOpcityPanel: UIView!
     
+    ///Use to display the size of drawing point in text
     @IBOutlet weak var BrushLabel: UILabel!
     
+    ///Use to display display the transparency of drawing point in text
     @IBOutlet weak var OpacityLabel: UILabel!
     
+    ///Use to change the size of drawing point
     @IBOutlet weak var brushSlider: UISlider!
     
+    ///Use to change the transparency of drawing point
     @IBOutlet weak var opacitySlider: UISlider!
     
-    
+    /**
+        This function hands when brushSlider is slided by user.
+        It will change the brushProerties and display accordingly
+     */
     @IBAction func BrushSlider(_ sender: UISlider) {
        
        brushPropertiesChange()
         
     }
     
+    /**
+         This function hands when OpacitySlider is slided by user.
+         It will change the OpacityProerties and display accordingly
+     */
     @IBAction func OpacitySlider(_ sender: UISlider) {
         
         opacityPropertiesChange()
@@ -75,7 +87,12 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-   
+    /**
+         This function handles the event which pen button gets pressed.
+         It will store the panel information such that if it is enable.
+         Also, eraserEnable to set to false
+     
+     */
     @IBAction func penButtomPressed(_ sender: UIButton) {
         
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
@@ -85,7 +102,11 @@ class ScratchPaperViewController:UIViewController {
         attribute.instance.eraserEnable = false
     }
     
-    
+    /**
+         This function handles the event which undo button gets pressed.
+         undo function in paperView will get call to perfrom the undo step
+     
+     */
     @IBAction func unDoButtomPressed(_ sender: UIButton) {
         
         paperView.undo()
@@ -93,7 +114,11 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-   
+    /**
+        This function handles the event which redo button gets pressed.
+        redo function in paperView will get call to perfrom the redo step
+     
+     */
     @IBAction func reDoButtomPrssed(_ sender: Any) {
         
         paperView.redo()
@@ -101,7 +126,11 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
- 
+    /**
+        This function handles the event which eraser button gets pressed.
+        It will store the eraser information such that if it is enable
+     
+    */
     @IBAction func eraserButtonPressed(_ sender: Any) {
         
         attribute.instance.eraserEnable = !attribute.instance.eraserEnable
@@ -111,7 +140,14 @@ class ScratchPaperViewController:UIViewController {
     }
     
     
-    
+    /**
+        This function handles the event which clear button get pressed.
+        It will display the alert to ask if user want to delete all drawing
+        context.
+     
+        ## Import Notes ##
+        1. Undo will not be able to recover to the previous state
+     */
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         
         if !paperView.drawContextArray.isEmpty {
@@ -131,7 +167,11 @@ class ScratchPaperViewController:UIViewController {
     }
     
     
-    
+    /**
+         This function handle the event which color button get pressed.
+         It will store the color information based on user selection
+     
+     */
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         
         attribute.instance.colorIndex = sender.tag
@@ -140,7 +180,12 @@ class ScratchPaperViewController:UIViewController {
         
     }
   
-  
+    /**
+        This function handle the event which share button get pressed.
+        It will first covert the paperView to an image.Then, image can
+        be shared in apps, send to email or print.
+ 
+    */
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
         delayPanelClose()
@@ -152,7 +197,11 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    
+    /**
+        This function set attribute numBrush based on the current burshSlider
+        value which user selected. Also, change will display in text.
+     
+     */
     func brushPropertiesChange() {
         
         attribute.instance.numBrush = Int16(brushSlider.value)
@@ -160,7 +209,11 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    
+    /**
+        This function set attribute numOpacity based on the current opacitySlider
+        value which user selected. Also, change will display in text.
+     
+     */
     func opacityPropertiesChange() {
         
         attribute.instance.numOpacity = opacitySlider.value
