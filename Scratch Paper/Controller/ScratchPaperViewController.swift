@@ -10,25 +10,37 @@
 
 import UIKit
 
+/**
+    This 
+ 
+ */
 class ScratchPaperViewController:UIViewController {
     
-    
+    ////Some constans used in this programs
     struct Constants {
         
+        ///A4 paper height in pixc
         static let A4_HEIGHT = CGFloat(3507)
+        
+        ///The height of the drawing area
         static let PAPERHEIGHT = ABDAY_4 * 5
+        
+        ///The height of scorllView
         static let SCROLLER_CONTENT_HEIGHT = CGFloat(2000)
         
     }
     
-
+    @IBOutlet weak var penButton: UIButton!
+    /// scollerView which handes scroll
     @IBOutlet weak var scroller: UIScrollView!
     
+    ///The darwing area
     @IBOutlet weak var paperView: ScratchPaperView!
     
+    //// The tool bar
     @IBOutlet weak var toolBarView: UIView!
     
-    ///Use to display 
+    ///The Panel which inculding color,bursh and opcity option
     @IBOutlet weak var ColorBrushOpcityPanel: UIView!
     
     ///Use to display the size of drawing point in text
@@ -77,6 +89,7 @@ class ScratchPaperViewController:UIViewController {
         paperView.loadTochEndPoint()
         
         paperView.resetDrawContextBeforeTerminated()
+        penButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
         
         
     }
@@ -100,6 +113,7 @@ class ScratchPaperViewController:UIViewController {
         attribute.instance.colorPanelIsEnable = !attribute.instance.colorPanelIsEnable
         
         attribute.instance.eraserEnable = false
+        
     }
     
     /**
@@ -172,13 +186,12 @@ class ScratchPaperViewController:UIViewController {
          It will store the color information based on user selection
      
      */
+    
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        
         attribute.instance.colorIndex = sender.tag
-        
         delayPanelClose()
-        
     }
+    
   
     /**
         This function handle the event which share button get pressed.
@@ -235,7 +248,8 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-
+  
+    
 }
 
 

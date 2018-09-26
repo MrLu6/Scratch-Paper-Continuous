@@ -556,7 +556,7 @@ class ScratchPaperView: UIView{
 }
 
 /**
-    Extension to ScratchPaperView. More functionality may add into in later version
+    Extension to ScratchPaperView. More functionality may add into in the later version
  */
 extension ScratchPaperView {
     
