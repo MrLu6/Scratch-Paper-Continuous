@@ -76,7 +76,7 @@ class ScratchPaperViewController:UIViewController {
         
         paperView.resetDrawContextBeforeTerminated()
         
-        scroller.panGestureRecognizer.minimumNumberOfTouches = 2
+        
         
     }
 
@@ -108,6 +108,8 @@ class ScratchPaperViewController:UIViewController {
     
     @IBAction func penButtonPressed(_ sender: UIButton) {
         
+        Attributes.instance.HANDF_MODE_IS_ON = true
+        delayPanelClose()
         
     }
     

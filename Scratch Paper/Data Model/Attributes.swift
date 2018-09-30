@@ -45,7 +45,7 @@ class Attributes{
         
         Attributes.instance.ERASER_IS_ON = false
         Attributes.instance.SHARE_IS_ON = false
-        Attributes.instance.HANDF_MODE_IS_ON = false
+        
         
     }
     
@@ -53,7 +53,7 @@ class Attributes{
         
         Attributes.instance.ERASER_IS_ON = false
         Attributes.instance.SHARE_IS_ON = false
-        Attributes.instance.PAENL_IS_ON = false
+        
         
     }
     

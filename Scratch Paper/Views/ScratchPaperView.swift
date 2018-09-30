@@ -77,7 +77,7 @@ class ScratchPaperView: UIView{
 
             }
             
-            if touch.type == UITouchType.stylus {
+            if touch.type == UITouchType.stylus  {
                 superView.isScrollEnabled = false
             
                 previousPoint1 = touch.location(in: self)
@@ -105,7 +105,7 @@ class ScratchPaperView: UIView{
         
         if let touch = touches.first {
             
-            if touch.type == UITouchType.stylus {
+            if touch.type == UITouchType.stylus  {
                 
                    let newDrawingContext = pointsInPath(touches, with: event)
                 
@@ -257,9 +257,6 @@ class ScratchPaperView: UIView{
         newDrawingContext(touch point) color(RGB value) based on user selection.
      
         - Parameter newDrawingContext: touch point with all properties that store in core data.
-     
-        ## Import Notes ##
-           1.attirbute is the singleton approch to save small amount of data
      
      */
     func setContextColor(newDrawingContext: DrawContext ){
