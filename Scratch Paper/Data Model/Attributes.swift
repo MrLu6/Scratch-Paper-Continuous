@@ -27,6 +27,8 @@ class Attributes{
     
     var HANDF_MODE_IS_ON = false
     
+    let BACKGROUND_COLOR : (Float,Float,Float) = (1,1,1)
+    
     ///A4 paper height in pixcel
     
     ///The height of the drawing area

@@ -266,9 +266,9 @@ class ScratchPaperView: UIView{
        
         if Attributes.instance.ERASER_IS_ON == true {
             
-            newDrawingContext.colorR = Float(1)
-            newDrawingContext.colorG = Float(1)
-            newDrawingContext.colorB = Float(1)
+            newDrawingContext.colorR = Attributes.instance.BACKGROUND_COLOR.0
+            newDrawingContext.colorG = Attributes.instance.BACKGROUND_COLOR.1
+            newDrawingContext.colorB = Attributes.instance.BACKGROUND_COLOR.2
             
         }else{
      
