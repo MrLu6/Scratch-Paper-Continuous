@@ -105,7 +105,7 @@ class ScratchPaperView: UIView{
                 
                    let newDrawingContext = pointsInPath(touches, with: event)
                 
-                   if attribute.instance.colorPanelIsEnable == false {
+                   if !Attributes.instance.PAENL_IS_ON {
                     
                         drawContextArray.append(newDrawingContext)
                         save()
@@ -136,7 +136,7 @@ class ScratchPaperView: UIView{
             if touch.type == UITouchType.stylus {
                 
                 let newDrawingContext = pointsInPath(touches, with: event)
-                if attribute.instance.colorPanelIsEnable == false {
+                if !Attributes.instance.PAENL_IS_ON {
                     
                     let newTouchEndPoint = TouchEndPoint(context: self.context)
                     newTouchEndPoint.x = newDrawingContext.previousPoint1X
@@ -260,7 +260,7 @@ class ScratchPaperView: UIView{
      */
     func setContextColor(newDrawingContext: DrawContext ){
        
-        if attribute.instance.eraserEnable == true {
+        if Attributes.instance.ERASER_IS_ON == true {
             
             newDrawingContext.colorR = Float(1)
             newDrawingContext.colorG = Float(1)
@@ -268,44 +268,42 @@ class ScratchPaperView: UIView{
             
         }else{
      
-            newDrawingContext.colorR = attribute.instance.colorRGB[attribute.instance.colorIndex].0
-            newDrawingContext.colorG = attribute.instance.colorRGB[attribute.instance.colorIndex].1
-            newDrawingContext.colorB = attribute.instance.colorRGB[attribute.instance.colorIndex].2
+            newDrawingContext.colorR = Attributes.instance.COLOR_RGB_ARRAY[Attributes.instance.COLOR_INDEX].0
+            newDrawingContext.colorG = Attributes.instance.COLOR_RGB_ARRAY[Attributes.instance.COLOR_INDEX].1
+            newDrawingContext.colorB = Attributes.instance.COLOR_RGB_ARRAY[Attributes.instance.COLOR_INDEX].2
             
         }
 
     }
     
     /**
-     This function set lineWidth of newDrawingContext(touch point) based on user selection(numBrush).
+         This function set lineWidth of newDrawingContext(touch point) based on user selection(numBrush).
      
-     - Parameter newDrawingContext: touch point with all properties that store in core data.
+         - Parameter newDrawingContext: touch point with all properties that store in core data.
      
-     - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
+         - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
      
      */
     func setContextLineWidth(newDrawingContext: DrawContext ){
         
-        newDrawingContext.numBrush = attribute.instance.numBrush
+        newDrawingContext.numBrush = Attributes.instance.NUM_BRUSH
         
     }
     
     /**
-     This function set alpah of newDrawingContext(touch point) based on user selection(numOpacity).
-     
-     - Parameter newDrawingContext: touch point with all properties that store in core data.
-     
-     - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
+         This function set alpah of newDrawingContext(touch point) based on user selection(numOpacity).
+         
+         - Parameter newDrawingContext: touch point with all properties that store in core data.
+         
+         - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
      
      */
     func setContextAlpah(newDrawingContext: DrawContext){
-        if attribute.instance.eraserEnable == true{
-            newDrawingContext.numOpacity = Float(1)
-        }else{
-            newDrawingContext.numOpacity = attribute.instance.numOpacity
-        }
-        
+       
+            newDrawingContext.numOpacity = Attributes.instance.NUM_OPACITY
     }
+        
+    
         
     /**
         This function save all draw context(all points) into the core data.

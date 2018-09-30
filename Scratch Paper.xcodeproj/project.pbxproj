@@ -14,7 +14,7 @@
 		E2C7663120E99F5700334629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C7663020E99F5700334629 /* Assets.xcassets */; };
 		E2C7663420E99F5700334629 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C7663220E99F5700334629 /* LaunchScreen.storyboard */; };
 		E2C7663E20E9E6EF00334629 /* ScratchPaperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C7663D20E9E6EF00334629 /* ScratchPaperView.swift */; };
-		E2F4089C20ECC28000C7809C /* attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4089B20ECC28000C7809C /* attribute.swift */; };
+		E2F4089C20ECC28000C7809C /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F4089B20ECC28000C7809C /* Attributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		E2C7663320E99F5700334629 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2C7663520E99F5700334629 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2C7663D20E9E6EF00334629 /* ScratchPaperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchPaperView.swift; sourceTree = "<group>"; };
-		E2F4089B20ECC28000C7809C /* attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = attribute.swift; sourceTree = "<group>"; };
+		E2F4089B20ECC28000C7809C /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 		E2F4089820EC8B0D00C7809C /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				E2F4089B20ECC28000C7809C /* attribute.swift */,
+				E2F4089B20ECC28000C7809C /* Attributes.swift */,
 				E2C7662D20E99F5600334629 /* Scratch_Paper.xcdatamodeld */,
 			);
 			path = "Data Model";
@@ -179,7 +179,7 @@
 				E2C7663E20E9E6EF00334629 /* ScratchPaperView.swift in Sources */,
 				E2C7662920E99F5600334629 /* ScratchPaperViewController.swift in Sources */,
 				E2C7662F20E99F5600334629 /* Scratch_Paper.xcdatamodeld in Sources */,
-				E2F4089C20ECC28000C7809C /* attribute.swift in Sources */,
+				E2F4089C20ECC28000C7809C /* Attributes.swift in Sources */,
 				E2C7662720E99F5600334629 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

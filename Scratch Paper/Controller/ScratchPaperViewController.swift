@@ -6,7 +6,6 @@
 //  Copyright © 2018 CHENGJUN LU. All rights reserved.
 //
 
-    // let colorArray = ["Black","Brown","Gray","Green","Blue","Orange","Purple","Yellow","Red","Pink","LGreen","LBlue"]
 
 import UIKit
 
@@ -31,14 +30,14 @@ class ScratchPaperViewController:UIViewController {
     }
     
     @IBOutlet weak var penButton: UIButton!
+    
+    @IBOutlet weak var handButton: UIButton!
+    
     /// scollerView which handes scroll
     @IBOutlet weak var scroller: UIScrollView!
     
     ///The darwing area
     @IBOutlet weak var paperView: ScratchPaperView!
-    
-    //// The tool bar
-    @IBOutlet weak var toolBarView: UIView!
     
     ///The Panel which inculding color,bursh and opcity option
     @IBOutlet weak var ColorBrushOpcityPanel: UIView!
@@ -89,8 +88,6 @@ class ScratchPaperViewController:UIViewController {
         paperView.loadTochEndPoint()
         
         paperView.resetDrawContextBeforeTerminated()
-        penButton.imageView?.contentMode = UIViewContentMode.scaleAspectFit
-        
         
     }
 
@@ -110,11 +107,21 @@ class ScratchPaperViewController:UIViewController {
         
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
     
-        attribute.instance.colorPanelIsEnable = !attribute.instance.colorPanelIsEnable
+        Attributes.instance.PAENL_IS_ON = !Attributes.instance.PAENL_IS_ON
         
-        attribute.instance.eraserEnable = false
+        if Attributes.instance.PAENL_IS_ON {
+            
+            Attributes.instance.enableColorPanel()
+            
+        }
         
     }
+    
+    @IBAction func penButtonPressed(_ sender: UIButton) {
+        
+        
+    }
+    
     
     /**
          This function handles the event which undo button gets pressed.
@@ -147,7 +154,7 @@ class ScratchPaperViewController:UIViewController {
     */
     @IBAction func eraserButtonPressed(_ sender: Any) {
         
-        attribute.instance.eraserEnable = !attribute.instance.eraserEnable
+        Attributes.instance.ERASER_IS_ON = !Attributes.instance.ERASER_IS_ON
         
         delayPanelClose()
         
@@ -188,8 +195,10 @@ class ScratchPaperViewController:UIViewController {
      */
     
     @IBAction func colorButtonPressed(_ sender: UIButton) {
-        attribute.instance.colorIndex = sender.tag
+        
+        Attributes.instance.COLOR_INDEX = sender.tag
         delayPanelClose()
+        
     }
     
   
@@ -217,7 +226,8 @@ class ScratchPaperViewController:UIViewController {
      */
     func brushPropertiesChange() {
         
-        attribute.instance.numBrush = Int16(brushSlider.value)
+        Attributes.instance.NUM_BRUSH = Int16(brushSlider.value)
+        
         BrushLabel.text = "Brush: \(Int(brushSlider.value))"
         
     }
@@ -229,7 +239,8 @@ class ScratchPaperViewController:UIViewController {
      */
     func opacityPropertiesChange() {
         
-        attribute.instance.numOpacity = opacitySlider.value
+        Attributes.instance.NUM_OPACITY = opacitySlider.value
+        
         OpacityLabel.text = "Opacity: " + String(format: "%.1f", opacitySlider.value)
         
     }
@@ -240,7 +251,7 @@ class ScratchPaperViewController:UIViewController {
     */
     func delayPanelClose() {
         
-        attribute.instance.colorPanelIsEnable = false
+        Attributes.instance.PAENL_IS_ON = false
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.ColorBrushOpcityPanel.isHidden = true
