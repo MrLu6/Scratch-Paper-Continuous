@@ -94,6 +94,8 @@ class ScratchPaperViewController:UIViewController {
      */
     @IBAction func penButtomPressed(_ sender: UIButton) {
         
+        sender.showsTouchWhenHighlighted = true
+        
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
     
         Attributes.instance.PAENL_IS_ON = !Attributes.instance.PAENL_IS_ON
