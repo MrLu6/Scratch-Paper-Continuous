@@ -108,6 +108,7 @@ class ScratchPaperViewController:UIViewController {
     
     @IBAction func penButtonPressed(_ sender: UIButton) {
         
+        sender.showsTouchWhenHighlighted = true
         Attributes.instance.HANDF_MODE_IS_ON = true
         delayPanelClose()
         
@@ -121,6 +122,7 @@ class ScratchPaperViewController:UIViewController {
      */
     @IBAction func unDoButtomPressed(_ sender: UIButton) {
         
+        sender.showsTouchWhenHighlighted = true
         paperView.undo()
         delayPanelClose()
         
@@ -131,19 +133,26 @@ class ScratchPaperViewController:UIViewController {
         redo function in paperView will get call to perfrom the redo step
      
      */
-    @IBAction func reDoButtomPrssed(_ sender: Any) {
+ 
+    
+    @IBAction func redoButtonPressed(_ sender: UIButton) {
         
+        sender.showsTouchWhenHighlighted = true
         paperView.redo()
         delayPanelClose()
         
     }
+    
     
     /**
         This function handles the event which eraser button gets pressed.
         It will store the eraser information such that if it is enable
      
     */
-    @IBAction func eraserButtonPressed(_ sender: Any) {
+   
+    @IBAction func eraserButtonPressed(_ sender: UIButton) {
+        
+        sender.showsTouchWhenHighlighted = true
         
         Attributes.instance.ERASER_IS_ON = !Attributes.instance.ERASER_IS_ON
         
@@ -161,6 +170,8 @@ class ScratchPaperViewController:UIViewController {
         1. Undo will not be able to recover to the previous state
      */
     @IBAction func clearButtonPressed(_ sender: UIButton) {
+        
+        sender.showsTouchWhenHighlighted = true
         
         if !paperView.drawContextArray.isEmpty {
         
@@ -200,6 +211,8 @@ class ScratchPaperViewController:UIViewController {
  
     */
     @IBAction func shareButtonPressed(_ sender: UIButton) {
+        
+        sender.showsTouchWhenHighlighted = true
         
         delayPanelClose()
         
