@@ -14,20 +14,7 @@ import UIKit
  
  */
 class ScratchPaperViewController:UIViewController {
-    
-    ////Some constans used in this programs
-    struct Constants {
-        
-        ///A4 paper height in pixc
-        static let A4_HEIGHT = CGFloat(3507)
-        
-        ///The height of the drawing area
-        static let PAPERHEIGHT = ABDAY_4 * 5
-        
-        ///The height of scorllView
-        static let SCROLLER_CONTENT_HEIGHT = CGFloat(2000)
-        
-    }
+
     
     @IBOutlet weak var penButton: UIButton!
     
@@ -80,8 +67,8 @@ class ScratchPaperViewController:UIViewController {
         ColorBrushOpcityPanel.isHidden = true
         scroller.isScrollEnabled = false
         
-        paperView.frame.size.height = Constants.A4_HEIGHT
-        scroller.contentSize.height = Constants.SCROLLER_CONTENT_HEIGHT
+        paperView.frame.size.height = Attributes.instance.PAPER_HEIGHT
+        scroller.contentSize.height = Attributes.instance.SCROLLER_CONTENT_HEIGHT
         
         paperView.loadDrawingContext()
         paperView.loadTochBeginPoint()

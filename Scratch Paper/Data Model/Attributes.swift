@@ -26,6 +26,14 @@ class Attributes{
     var SHARE_IS_ON = false
     
     var HANDF_MODE_IS_ON = false
+    
+    ///A4 paper height in pixcel
+    
+    ///The height of the drawing area
+    let PAPER_HEIGHT = CGFloat(3507) * 10
+    
+    ///The height of scorllView
+    let SCROLLER_CONTENT_HEIGHT = CGFloat(2000)
 
     ///Singleton
     static let instance = Attributes()
