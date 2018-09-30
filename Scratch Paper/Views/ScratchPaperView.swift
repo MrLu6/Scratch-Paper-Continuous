@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 /**
-    This class perfrom have compelete controll of user drawing
+    This class perfrom handles user drawing
     such as save and load user drawing and perfrom undo/redo.
  */
 class ScratchPaperView: UIView{
@@ -25,34 +25,34 @@ class ScratchPaperView: UIView{
     /// This drawContextArray store all properties of the drawing content: color startPoint midPoint EndPoint numBrush and numOpacity.
     var drawContextArray  = [DrawContext]()
     
-    /// The undoRedoContextStack store all undo and redo content.
+    /// The undoRedoContextStack store all undo and redo user drawing content.
     var undoRedoContextStack = [DrawContext]()
 
     /// Use UserDefault to store number of times undo and redo.
     var defaults = UserDefaults.standard
     
-    /// The startPoint of drawing cotent.
+    /// The startPoint of user drawing cotent.
     var previousPoint1: CGPoint?
     
-    /// The endPoint of drawing content.
+    /// The endPoint of user drawing content.
     var previousPoint2: CGPoint?
     
-    /// The current point location of drawContent.
+    /// The current point location of user drawing content.
     var currentPoint: CGPoint?
     
-    /// The touchBeginPointArray store all properties of each touch begin point.
+    /// Store all properties of each touch begin point.
     var touchBeginPointArray = [TouchBeginPoint]()
     
-    /// The undoTouchBeginPointArray store touch begin point that remove from the touchBeginPointArra during the uno step and use later in the rodo step.
+    /// Stor touch begin point that remove from the touchBeginPointArra during the uno step and use later in the undo step.
     var undoTouchBeginPointArray = [TouchBeginPoint]()
     
-    /// The touchEndPointArray store all properties of each touch end point.
+    /// Store all properties of each touch end point.
     var touchEndPointArray = [TouchEndPoint]()
     
-    /// The redoEndPointArray store touch end point that remov from the touchEndPointArray during uno step and use later in the rodo step.
+    /// Store touch end point that remov from the touchEndPointArray during uno step and use later in the rodo step.
     var redoTouchEndPointArray = [TouchEndPoint]()
     
-    /// Use string array to keep track of the order of undo and redo (use to recovert the sate which before app terminated).
+    /// Keep track of the order of undo and redo (use to recovert the sate which before app is terminated).
     var numUndoRedoArray = [String]()
     
     /// Representative of all data in core data frame work of this app
@@ -71,7 +71,11 @@ class ScratchPaperView: UIView{
         if let touch = touches.first{
            
             let superView = self.superview as! UIScrollView
-            superView.isScrollEnabled = true
+            if  Attributes.instance.PAENL_IS_ON == false {
+                
+                superView.isScrollEnabled = true
+
+            }
             
             if touch.type == UITouchType.stylus {
                 superView.isScrollEnabled = false

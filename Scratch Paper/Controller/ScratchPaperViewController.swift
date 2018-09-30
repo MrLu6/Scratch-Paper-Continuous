@@ -76,6 +76,8 @@ class ScratchPaperViewController:UIViewController {
         
         paperView.resetDrawContextBeforeTerminated()
         
+        scroller.panGestureRecognizer.minimumNumberOfTouches = 2
+        
     }
 
     override func didReceiveMemoryWarning() {
