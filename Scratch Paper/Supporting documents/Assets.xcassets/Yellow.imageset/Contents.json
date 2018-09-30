@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "green.png",
+      "filename" : "255,255,0.png",
       "scale" : "1x"
     },
     {
