@@ -285,14 +285,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eKV-Va-5Rb" firstAttribute="top" secondItem="ayM-0H-XQR" secondAttribute="top" constant="72" id="6IY-KD-reT"/>
+                            <constraint firstItem="eKV-Va-5Rb" firstAttribute="leading" secondItem="ayM-0H-XQR" secondAttribute="leading" id="9jo-Yo-nSc"/>
                             <constraint firstItem="ZUF-vp-BNI" firstAttribute="leading" secondItem="ayM-0H-XQR" secondAttribute="leadingMargin" constant="96" id="Cjj-Yr-2Ia"/>
                             <constraint firstItem="eKV-Va-5Rb" firstAttribute="bottom" secondItem="kHw-cu-AfY" secondAttribute="bottom" id="EED-Dh-rk1"/>
                             <constraint firstItem="tdu-zN-Bhr" firstAttribute="leading" secondItem="ayM-0H-XQR" secondAttribute="leading" id="Hub-cE-408"/>
                             <constraint firstAttribute="trailing" secondItem="tdu-zN-Bhr" secondAttribute="trailing" id="HzJ-TX-4NU"/>
                             <constraint firstItem="ZUF-vp-BNI" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="bottom" constant="35" id="QpE-lQ-VJ5"/>
                             <constraint firstItem="eKV-Va-5Rb" firstAttribute="leading" secondItem="tdu-zN-Bhr" secondAttribute="leading" id="UaS-h0-e0i"/>
+                            <constraint firstAttribute="bottom" secondItem="eKV-Va-5Rb" secondAttribute="bottom" id="fZG-f2-QO2"/>
+                            <constraint firstItem="eKV-Va-5Rb" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="bottom" id="fu2-k8-8jy"/>
                             <constraint firstItem="eKV-Va-5Rb" firstAttribute="trailing" secondItem="tdu-zN-Bhr" secondAttribute="trailing" id="kjp-4p-5Ce"/>
                             <constraint firstItem="eKV-Va-5Rb" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="bottom" id="pFl-9C-Zio"/>
+                            <constraint firstAttribute="trailing" secondItem="eKV-Va-5Rb" secondAttribute="trailing" id="qsP-M7-Dyk"/>
                             <constraint firstItem="tdu-zN-Bhr" firstAttribute="top" secondItem="ayM-0H-XQR" secondAttribute="top" id="zz0-bX-Mnm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kHw-cu-AfY"/>

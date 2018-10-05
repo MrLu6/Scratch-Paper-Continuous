@@ -18,7 +18,6 @@ class ScratchPaperViewController:UIViewController {
     
     @IBOutlet weak var penButton: UIButton!
 
-    
     @IBOutlet weak var eraserButton: UIButton!
     /// scollerView which handes scroll
     @IBOutlet weak var scroller: UIScrollView!
@@ -75,7 +74,7 @@ class ScratchPaperViewController:UIViewController {
         paperView.loadTochEndPoint()
         
         paperView.resetDrawContextBeforeTerminated()
-        
+        paperView.translatesAutoresizingMaskIntoConstraints = false
         
         
     }
@@ -93,8 +92,6 @@ class ScratchPaperViewController:UIViewController {
      
      */
     @IBAction func penButtomPressed(_ sender: UIButton) {
-        
-        
         
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
     
@@ -160,8 +157,6 @@ class ScratchPaperViewController:UIViewController {
         Attributes.instance.ERASER_IS_ON = !Attributes.instance.ERASER_IS_ON
         
         if Attributes.instance.ERASER_IS_ON {
-            Attributes.instance.PAENL_IS_ON = false
-            penButton.setImage(UIImage(named: "PANEL_OFF"), for: .normal)
             sender.setImage(UIImage(named: "ERASER_ON"), for: .normal)
         }else{
             sender.setImage(UIImage(named: "ERASER_OFF"), for: .normal)
@@ -206,11 +201,11 @@ class ScratchPaperViewController:UIViewController {
          It will store the color information based on user selection
      
      */
-    
     @IBAction func colorButtonPressed(_ sender: UIButton) {
         
         Attributes.instance.COLOR_INDEX = sender.tag
         delayPanelClose()
+        
         
     }
     
@@ -267,7 +262,7 @@ class ScratchPaperViewController:UIViewController {
     func delayPanelClose() {
         
         Attributes.instance.PAENL_IS_ON = false
-        
+        penButton.setImage(UIImage(named:"PANEL_OFF"), for: .normal )
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.ColorBrushOpcityPanel.isHidden = true
         }
