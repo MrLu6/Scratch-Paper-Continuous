@@ -17,9 +17,9 @@ class ScratchPaperViewController:UIViewController {
 
     
     @IBOutlet weak var penButton: UIButton!
+
     
-    @IBOutlet weak var handButton: UIButton!
-    
+    @IBOutlet weak var eraserButton: UIButton!
     /// scollerView which handes scroll
     @IBOutlet weak var scroller: UIScrollView!
     
@@ -94,16 +94,19 @@ class ScratchPaperViewController:UIViewController {
      */
     @IBAction func penButtomPressed(_ sender: UIButton) {
         
-        sender.showsTouchWhenHighlighted = true
+        
         
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
     
         Attributes.instance.PAENL_IS_ON = !Attributes.instance.PAENL_IS_ON
         
         if Attributes.instance.PAENL_IS_ON {
+            Attributes.instance.ERASER_IS_ON = false
+            sender.setImage(UIImage(named: "PANEL_ON"), for: .normal)
+            eraserButton.setImage(UIImage(named: "ERASER_OFF"), for: .normal)
+        }else{
             
-            Attributes.instance.enableColorPanel()
-            
+            sender.setImage(UIImage(named: "PANEL_OFF"), for: .normal)
         }
         
     }
@@ -111,7 +114,6 @@ class ScratchPaperViewController:UIViewController {
     @IBAction func penButtonPressed(_ sender: UIButton) {
         
         sender.showsTouchWhenHighlighted = true
-        Attributes.instance.HANDF_MODE_IS_ON = true
         delayPanelClose()
         
     }
@@ -154,11 +156,18 @@ class ScratchPaperViewController:UIViewController {
    
     @IBAction func eraserButtonPressed(_ sender: UIButton) {
         
-        sender.showsTouchWhenHighlighted = true
-        
+        delayPanelClose()
         Attributes.instance.ERASER_IS_ON = !Attributes.instance.ERASER_IS_ON
         
-        delayPanelClose()
+        if Attributes.instance.ERASER_IS_ON {
+            Attributes.instance.PAENL_IS_ON = false
+            penButton.setImage(UIImage(named: "PANEL_OFF"), for: .normal)
+            sender.setImage(UIImage(named: "ERASER_ON"), for: .normal)
+        }else{
+            sender.setImage(UIImage(named: "ERASER_OFF"), for: .normal)
+        }
+        
+        
         
     }
     

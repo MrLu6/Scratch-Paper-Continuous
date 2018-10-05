@@ -22,78 +22,87 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-zN-Bhr" userLabel="ToolBar View">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="72"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-TY-XWk" userLabel="Undo">
-                                        <rect key="frame" x="312" y="14" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" backgroundImage="UNDO"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DK-TY-XWk" userLabel="Undo">
+                                        <rect key="frame" x="344" y="24" width="30" height="24.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24.5" id="4dw-JX-3rb"/>
+                                            <constraint firstAttribute="width" constant="30" id="ZsI-8K-EWa"/>
+                                        </constraints>
+                                        <state key="normal" image="UNDO_ON"/>
                                         <connections>
                                             <action selector="unDoButtomPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="4oz-AW-lGN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzu-dk-X70" userLabel="Redo">
-                                        <rect key="frame" x="367" y="14" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="REDO"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzu-dk-X70" userLabel="Redo">
+                                        <rect key="frame" x="384" y="24" width="30" height="24.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="e8h-cK-gfK"/>
+                                            <constraint firstAttribute="height" constant="24.5" id="fvf-qk-HwD"/>
+                                        </constraints>
+                                        <state key="normal" image="REDO_ON"/>
                                         <connections>
                                             <action selector="redoButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="JYQ-PQ-hJG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-LA-11j" userLabel="pen">
-                                        <rect key="frame" x="254" y="16" width="50" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="penPanel"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-LA-11j" userLabel="pen">
+                                        <rect key="frame" x="303" y="24.5" width="32" height="23.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.5" id="JAc-Jq-EMb"/>
+                                            <constraint firstAttribute="width" constant="32" id="TOP-82-cjs"/>
+                                        </constraints>
+                                        <state key="normal" image="PANEL_OFF"/>
                                         <connections>
                                             <action selector="penButtomPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="BsF-u7-Ox3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-g1-JBf">
-                                        <rect key="frame" x="20" y="20" width="45" height="45"/>
+                                        <rect key="frame" x="20" y="27" width="34" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="4uu-bX-Y9D"/>
-                                            <constraint firstAttribute="width" constant="45" id="L9R-JF-5Xb"/>
+                                            <constraint firstAttribute="width" constant="34" id="C9d-hV-bND"/>
+                                            <constraint firstAttribute="height" constant="21" id="HAx-US-PeV"/>
                                         </constraints>
-                                        <state key="normal" image="SHARE"/>
+                                        <state key="normal" image="SHARE_OFF"/>
                                         <connections>
                                             <action selector="shareButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="Pgb-0v-W8p"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeX-mb-MeE">
-                                        <rect key="frame" x="472" y="14" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="HAND"/>
-                                        <connections>
-                                            <action selector="penButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="J1d-pB-qcu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G82-67-VYb" userLabel="eraser">
-                                        <rect key="frame" x="422" y="14" width="45" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="ERASER"/>
-                                        <connections>
-                                            <action selector="eraserButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="h6O-Bc-iJh"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joy-iM-UBe" userLabel="clesar">
-                                        <rect key="frame" x="688" y="20" width="60" height="45"/>
+                                        <rect key="frame" x="703" y="30" width="33" height="20.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="0B3-Sz-l6O"/>
-                                            <constraint firstAttribute="width" constant="60" id="7SL-l4-Pk5"/>
+                                            <constraint firstAttribute="width" constant="33" id="BTa-TL-KcV"/>
+                                            <constraint firstAttribute="height" constant="20.5" id="GB9-M9-lV3"/>
                                         </constraints>
-                                        <state key="normal" image="CLEAR"/>
+                                        <state key="normal" image="CLEAR_OFF"/>
                                         <connections>
                                             <action selector="clearButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="M01-hN-bLj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G82-67-VYb" userLabel="eraser">
+                                        <rect key="frame" x="422" y="23" width="30" height="26.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26.5" id="ZCH-bl-XCI"/>
+                                            <constraint firstAttribute="width" constant="30" id="kfe-oZ-lcX"/>
+                                        </constraints>
+                                        <state key="normal" image="ERASER_OFF"/>
+                                        <connections>
+                                            <action selector="eraserButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="h6O-Bc-iJh"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.82394379377365112" green="0.93550699949264526" blue="0.95565158128738403" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="3hq-g1-JBf" firstAttribute="leading" secondItem="tdu-zN-Bhr" secondAttribute="leading" constant="20" id="3Sz-KH-4ga"/>
-                                    <constraint firstItem="joy-iM-UBe" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="top" constant="20" id="F3R-kO-hXi"/>
-                                    <constraint firstItem="joy-iM-UBe" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="top" constant="20" id="FcU-RR-6AQ"/>
-                                    <constraint firstItem="3hq-g1-JBf" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="top" constant="20" id="UN5-r5-5ll"/>
-                                    <constraint firstAttribute="trailing" secondItem="joy-iM-UBe" secondAttribute="trailing" constant="20" id="ZRH-Hf-uRZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="joy-iM-UBe" secondAttribute="trailing" constant="20" id="gT6-TS-M9t"/>
+                                    <constraint firstItem="G82-67-VYb" firstAttribute="centerY" secondItem="tdu-zN-Bhr" secondAttribute="centerY" id="0rI-S9-uIq"/>
+                                    <constraint firstItem="2DK-TY-XWk" firstAttribute="centerY" secondItem="tdu-zN-Bhr" secondAttribute="centerY" id="CEj-LG-Ce2"/>
+                                    <constraint firstItem="hzu-dk-X70" firstAttribute="centerY" secondItem="tdu-zN-Bhr" secondAttribute="centerY" id="D9B-xH-Yhw"/>
+                                    <constraint firstItem="3hq-g1-JBf" firstAttribute="leading" secondItem="tdu-zN-Bhr" secondAttribute="leading" constant="20" id="Eii-zR-cwC"/>
+                                    <constraint firstItem="joy-iM-UBe" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="top" constant="30" id="LwH-Gb-g22"/>
+                                    <constraint firstItem="G82-67-VYb" firstAttribute="centerX" secondItem="tdu-zN-Bhr" secondAttribute="centerX" constant="53" id="PUj-tf-CSU"/>
+                                    <constraint firstItem="hzu-dk-X70" firstAttribute="centerX" secondItem="tdu-zN-Bhr" secondAttribute="centerX" constant="15" id="XTZ-wE-6l4"/>
+                                    <constraint firstItem="N3s-LA-11j" firstAttribute="centerX" secondItem="tdu-zN-Bhr" secondAttribute="centerX" constant="-65" id="Yfq-BT-yx0"/>
+                                    <constraint firstAttribute="trailing" secondItem="joy-iM-UBe" secondAttribute="trailing" constant="32" id="jXV-NL-4Ci"/>
+                                    <constraint firstItem="3hq-g1-JBf" firstAttribute="top" secondItem="tdu-zN-Bhr" secondAttribute="top" constant="27" id="nPG-47-n2J"/>
+                                    <constraint firstItem="2DK-TY-XWk" firstAttribute="centerX" secondItem="tdu-zN-Bhr" secondAttribute="centerX" constant="-25" id="nvC-vA-cMg"/>
+                                    <constraint firstItem="N3s-LA-11j" firstAttribute="centerY" secondItem="tdu-zN-Bhr" secondAttribute="centerY" id="wi3-m3-kbt"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKV-Va-5Rb" userLabel="scrollView">
@@ -293,7 +302,7 @@
                         <outlet property="ColorBrushOpcityPanel" destination="ZUF-vp-BNI" id="6oB-uv-DGq"/>
                         <outlet property="OpacityLabel" destination="Djw-Ot-BEZ" id="Jx2-8b-Zr4"/>
                         <outlet property="brushSlider" destination="7D9-Wi-OJL" id="2qV-LR-cK5"/>
-                        <outlet property="handButton" destination="AeX-mb-MeE" id="T4W-Hg-DKg"/>
+                        <outlet property="eraserButton" destination="G82-67-VYb" id="1dF-hs-jdO"/>
                         <outlet property="opacitySlider" destination="62W-wE-8dc" id="JMO-5z-dvK"/>
                         <outlet property="paperView" destination="yVQ-r9-ncG" id="a9I-hi-uzJ"/>
                         <outlet property="penButton" destination="N3s-LA-11j" id="f8p-4i-U8g"/>
@@ -308,26 +317,25 @@
     <resources>
         <image name="Black" width="146" height="146"/>
         <image name="Blue" width="146" height="146"/>
-        <image name="CLEAR" width="299" height="186"/>
+        <image name="CLEAR_OFF" width="275" height="170"/>
         <image name="DarkPurple" width="146" height="146"/>
-        <image name="ERASER" width="215" height="193"/>
+        <image name="ERASER_OFF" width="250" height="223"/>
         <image name="Gray" width="146" height="146"/>
         <image name="GrayGreen" width="146" height="146"/>
         <image name="Green" width="146" height="146"/>
         <image name="GrennBlue" width="146" height="146"/>
-        <image name="HAND" width="270" height="262"/>
         <image name="LightBlUE" width="146" height="146"/>
         <image name="LightGreen" width="146" height="146"/>
         <image name="LightPurple" width="146" height="146"/>
         <image name="Orange" width="146" height="146"/>
+        <image name="PANEL_OFF" width="267" height="197"/>
         <image name="PinkOrange" width="146" height="146"/>
         <image name="Purple" width="146" height="146"/>
-        <image name="REDO" width="258" height="215"/>
+        <image name="REDO_ON" width="258" height="215"/>
         <image name="Red" width="146" height="146"/>
-        <image name="SHARE" width="294" height="182"/>
-        <image name="UNDO" width="259" height="215"/>
+        <image name="SHARE_OFF" width="286" height="174"/>
+        <image name="UNDO_ON" width="259" height="215"/>
         <image name="Yellow" width="146" height="146"/>
         <image name="earthy yellow" width="1003" height="1003"/>
-        <image name="penPanel" width="276" height="205"/>
     </resources>
 </document>

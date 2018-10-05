@@ -40,22 +40,7 @@ class Attributes{
     ///Singleton
     static let instance = Attributes()
     
-    
-    func enableColorPanel(){
-        
-        Attributes.instance.ERASER_IS_ON = false
-        Attributes.instance.SHARE_IS_ON = false
-        
-        
-    }
-    
-    func enableHandMode(){
-        
-        Attributes.instance.ERASER_IS_ON = false
-        Attributes.instance.SHARE_IS_ON = false
-        
-        
-    }
+  
     
     
 }
