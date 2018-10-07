@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YmL-4e-dk1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YmL-4e-dk1">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,7 +43,7 @@
                                             <action selector="redoButtonPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="JYQ-PQ-hJG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-LA-11j" userLabel="pen">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3s-LA-11j" userLabel="panel">
                                         <rect key="frame" x="303" y="24.5" width="32" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="23.5" id="JAc-Jq-EMb"/>
@@ -52,7 +51,7 @@
                                         </constraints>
                                         <state key="normal" image="PANEL_OFF"/>
                                         <connections>
-                                            <action selector="penButtomPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="BsF-u7-Ox3"/>
+                                            <action selector="panelButtomPressed:" destination="YmL-4e-dk1" eventType="touchUpInside" id="hFP-1X-64f"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-g1-JBf">
@@ -308,8 +307,8 @@
                         <outlet property="brushSlider" destination="7D9-Wi-OJL" id="2qV-LR-cK5"/>
                         <outlet property="eraserButton" destination="G82-67-VYb" id="1dF-hs-jdO"/>
                         <outlet property="opacitySlider" destination="62W-wE-8dc" id="JMO-5z-dvK"/>
+                        <outlet property="panelButton" destination="N3s-LA-11j" id="g3f-nR-5hz"/>
                         <outlet property="paperView" destination="yVQ-r9-ncG" id="a9I-hi-uzJ"/>
-                        <outlet property="penButton" destination="N3s-LA-11j" id="f8p-4i-U8g"/>
                         <outlet property="scroller" destination="eKV-Va-5Rb" id="n26-Zh-7Xa"/>
                     </connections>
                 </viewController>
@@ -319,27 +318,27 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Black" width="146" height="146"/>
-        <image name="Blue" width="146" height="146"/>
-        <image name="CLEAR_OFF" width="275" height="170"/>
-        <image name="DarkPurple" width="146" height="146"/>
-        <image name="ERASER_OFF" width="250" height="223"/>
-        <image name="Gray" width="146" height="146"/>
-        <image name="GrayGreen" width="146" height="146"/>
-        <image name="Green" width="146" height="146"/>
-        <image name="GrennBlue" width="146" height="146"/>
-        <image name="LightBlUE" width="146" height="146"/>
-        <image name="LightGreen" width="146" height="146"/>
-        <image name="LightPurple" width="146" height="146"/>
-        <image name="Orange" width="146" height="146"/>
-        <image name="PANEL_OFF" width="267" height="197"/>
-        <image name="PinkOrange" width="146" height="146"/>
-        <image name="Purple" width="146" height="146"/>
-        <image name="REDO_ON" width="258" height="215"/>
-        <image name="Red" width="146" height="146"/>
-        <image name="SHARE_OFF" width="286" height="174"/>
-        <image name="UNDO_ON" width="259" height="215"/>
-        <image name="Yellow" width="146" height="146"/>
+        <image name="Black" width="35" height="35"/>
+        <image name="Blue" width="35" height="35"/>
+        <image name="CLEAR_OFF" width="66" height="40.799999237060547"/>
+        <image name="DarkPurple" width="35" height="35"/>
+        <image name="ERASER_OFF" width="60" height="53.520000457763672"/>
+        <image name="Gray" width="35" height="35"/>
+        <image name="GrayGreen" width="35" height="35"/>
+        <image name="Green" width="35" height="35"/>
+        <image name="GrennBlue" width="35" height="35"/>
+        <image name="LightBlUE" width="35" height="35"/>
+        <image name="LightGreen" width="35" height="35"/>
+        <image name="LightPurple" width="35" height="35"/>
+        <image name="Orange" width="35" height="35"/>
+        <image name="PANEL_OFF" width="64.080001831054688" height="47.279998779296875"/>
+        <image name="PinkOrange" width="35" height="35"/>
+        <image name="Purple" width="35" height="35"/>
+        <image name="REDO_ON" width="61.919998168945312" height="51.599998474121094"/>
+        <image name="Red" width="35" height="35"/>
+        <image name="SHARE_OFF" width="68.639999389648438" height="41.759998321533203"/>
+        <image name="UNDO_ON" width="62.159999847412109" height="51.599998474121094"/>
+        <image name="Yellow" width="35" height="35"/>
         <image name="earthy yellow" width="1003" height="1003"/>
     </resources>
 </document>

@@ -10,16 +10,18 @@
 import UIKit
 
 /**
-    This 
- 
+ This class handles all user interactions of ScratchPaperViewController
+ such as color choices, bursh and opacity level, redo and button pressed ect...
  */
 class ScratchPaperViewController:UIViewController {
 
-    
-    @IBOutlet weak var penButton: UIButton!
+    ///Link to panelButton
+    @IBOutlet weak var panelButton: UIButton!
 
+    ///Link to eraserButton
     @IBOutlet weak var eraserButton: UIButton!
-    /// scollerView which handes scroll
+    
+    ///scollerView which handes scroll
     @IBOutlet weak var scroller: UIScrollView!
     
     ///The darwing area
@@ -28,16 +30,16 @@ class ScratchPaperViewController:UIViewController {
     ///The Panel which inculding color,bursh and opcity option
     @IBOutlet weak var ColorBrushOpcityPanel: UIView!
     
-    ///Use to display the size of drawing point in text
+    ///Display the size of drawing point in text
     @IBOutlet weak var BrushLabel: UILabel!
     
-    ///Use to display display the transparency of drawing point in text
+    ///Display display the transparency of drawing point in text
     @IBOutlet weak var OpacityLabel: UILabel!
     
-    ///Use to change the size of drawing point
+    ///Change the size of drawing point
     @IBOutlet weak var brushSlider: UISlider!
     
-    ///Use to change the transparency of drawing point
+    ///Change the transparency of drawing point
     @IBOutlet weak var opacitySlider: UISlider!
     
     /**
@@ -51,8 +53,8 @@ class ScratchPaperViewController:UIViewController {
     }
     
     /**
-         This function hands when OpacitySlider is slided by user.
-         It will change the OpacityProerties and display accordingly
+     This function hands when OpacitySlider is slided by user.
+     It will change the OpacityProerties and display accordingly
      */
     @IBAction func OpacitySlider(_ sender: UISlider) {
         
@@ -60,7 +62,13 @@ class ScratchPaperViewController:UIViewController {
         
     }
         
-    
+    /**
+     This function hands when View is initally load
+     1.Hide the panel
+     2.Disable scroll view
+     3.Set up the size of its subview
+     4.Reload the user draw content
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         ColorBrushOpcityPanel.isHidden = true
@@ -74,24 +82,18 @@ class ScratchPaperViewController:UIViewController {
         paperView.loadTochEndPoint()
         
         paperView.resetDrawContextBeforeTerminated()
-        paperView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
         
     }
     
     /**
-         This function handles the event which pen button gets pressed.
-         It will store the panel information such that if it is enable.
-         Also, eraserEnable to set to false
+     This function handles the event which panel button gets pressed.
+     It will store the panel information such that if it is enable.
+     Also, eraserEnable to set to false and change pictures icons
+     based on the status of panel button and eraser button.
      
      */
-    @IBAction func penButtomPressed(_ sender: UIButton) {
+    @IBAction func panelButtomPressed(_ sender: UIButton) {
         
         ColorBrushOpcityPanel.isHidden = !ColorBrushOpcityPanel.isHidden
     
@@ -108,17 +110,10 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    @IBAction func penButtonPressed(_ sender: UIButton) {
-        
-        sender.showsTouchWhenHighlighted = true
-        delayPanelClose()
-        
-    }
-    
-    
     /**
-         This function handles the event which undo button gets pressed.
-         undo function in paperView will get call to perfrom the undo step
+     This function handles the event which undo button gets pressed.
+     undo function in paperView will get call to perfrom the undo step
+     Also,highlighted the button if pressed
      
      */
     @IBAction func unDoButtomPressed(_ sender: UIButton) {
@@ -130,12 +125,11 @@ class ScratchPaperViewController:UIViewController {
     }
     
     /**
-        This function handles the event which redo button gets pressed.
-        redo function in paperView will get call to perfrom the redo step
+     This function handles the event which redo button gets pressed.
+     redo function in paperView will get call to perfrom the redo step
+     Also,highlighted the button if pressed
      
      */
- 
-    
     @IBAction func redoButtonPressed(_ sender: UIButton) {
         
         sender.showsTouchWhenHighlighted = true
@@ -144,13 +138,12 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    
     /**
-        This function handles the event which eraser button gets pressed.
-        It will store the eraser information such that if it is enable
+     This function handles the event which eraser button gets pressed.
+     It will store the eraser information such that if it is enable and change
+     pictures icons based on the status of eraser button.
      
     */
-   
     @IBAction func eraserButtonPressed(_ sender: UIButton) {
         
         delayPanelClose()
@@ -166,14 +159,14 @@ class ScratchPaperViewController:UIViewController {
         
     }
     
-    
     /**
-        This function handles the event which clear button get pressed.
-        It will display the alert to ask if user want to delete all drawing
-        context.
+     This function handles the event which clear button get pressed.
+     It will display the alert to ask if user want to delete all drawing
+     context. Also,highlighted the button if pressed
      
-        ## Import Notes ##
-        1. Undo will not be able to recover to the previous state
+     ## Import Notes ##
+     1. Undo will not be able to recover to the previous state
+     
      */
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         
@@ -197,11 +190,14 @@ class ScratchPaperViewController:UIViewController {
     
     
     /**
-         This function handle the event which color button get pressed.
-         It will store the color information based on user selection
-     
+     This function handle the event which color button get pressed.
+     It will store the color information based on user selection.
+     Also,highlighted the button if pressed
+    
      */
     @IBAction func colorButtonPressed(_ sender: UIButton) {
+        
+        sender.showsTouchWhenHighlighted = true
         
         Attributes.instance.COLOR_INDEX = sender.tag
         delayPanelClose()
@@ -214,7 +210,7 @@ class ScratchPaperViewController:UIViewController {
         This function handle the event which share button get pressed.
         It will first covert the paperView to an image.Then, image can
         be shared in apps, send to email or print.
- 
+        Also,highlighted the button if pressed
     */
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         
@@ -230,8 +226,8 @@ class ScratchPaperViewController:UIViewController {
     }
     
     /**
-        This function set attribute numBrush based on the current burshSlider
-        value which user selected. Also, change will display in text.
+     This function set attribute numBrush based on the current burshSlider
+     value which user selected. Also, change will display in text.
      
      */
     func brushPropertiesChange() {
@@ -243,8 +239,8 @@ class ScratchPaperViewController:UIViewController {
     }
     
     /**
-        This function set attribute numOpacity based on the current opacitySlider
-        value which user selected. Also, change will display in text.
+     This function set attribute numOpacity based on the current opacitySlider
+     value which user selected. Also, change will display in text.
      
      */
     func opacityPropertiesChange() {
@@ -256,20 +252,18 @@ class ScratchPaperViewController:UIViewController {
     }
     
     /**
-        This function aims to close the colorPanel with 0.1s delay time.
+     This function aims to close the colorPanel with 0.1s delay time.
      
     */
     func delayPanelClose() {
         
         Attributes.instance.PAENL_IS_ON = false
-        penButton.setImage(UIImage(named:"PANEL_OFF"), for: .normal )
+        panelButton.setImage(UIImage(named:"PANEL_OFF"), for: .normal )
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.ColorBrushOpcityPanel.isHidden = true
         }
         
     }
-    
-  
     
 }
 
