@@ -10,8 +10,8 @@ import UIKit
 import CoreData
 
 /**
-    This class perfrom handles user drawing
-    such as save and load user drawing and perfrom undo/redo.
+ This class perfrom handles user drawing
+ such as save and load user drawing and perfrom undo/redo.
  */
 class ScratchPaperView: UIView{
     
@@ -60,10 +60,10 @@ class ScratchPaperView: UIView{
     
     /**
      
-        ## Import Notes ##
-        1. Stop sorlling when recieve input from apple pencil.
-        2. Store begin touch point as previousPoint1 into the core data framework.
-        3. Store each touch begin point into touchBeginArray.
+     ## Import Notes ##
+     1. Stop sorlling when recieve input from apple pencil.
+     2. Store begin touch point as previousPoint1 into the core data framework.
+     3. Store each touch begin point into touchBeginArray.
      
      */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -95,10 +95,10 @@ class ScratchPaperView: UIView{
     
     /**
      
-        ## Import Notes ##
-        1. Pass each point during the touchMoved step into the pointsInPath function
-        2. Add DrawContext that created by pointsInpath function into the drawContextArray
-        3. Store all drwcontext infromation into core data
+     ## Import Notes ##
+     1. Pass each point during the touchMoved step into the pointsInPath function
+     2. Add DrawContext that created by pointsInpath function into the drawContextArray
+     3. Store all drwcontext infromation into core data
      
      */
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -123,11 +123,11 @@ class ScratchPaperView: UIView{
     
     /**
      
-        ## Import Notes ##
-        1. Stop sorlling when recieve input from apple pencil.
-        2. Store touch end point as previousPoint1 into the core data framework.
-        3. Store each touch end point into touchEndArray.
-        4. Store all drwcontext infromation into core data
+     ## Import Notes ##
+     1. Stop sorlling when recieve input from apple pencil.
+     2. Store touch end point as previousPoint1 into the core data framework.
+     3. Store each touch end point into touchEndArray.
+     4. Store all drwcontext infromation into core data
      
      */
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -159,18 +159,18 @@ class ScratchPaperView: UIView{
     }
     
     /**
-       This function uses the current touch point and the previous touch point to calculate the midpoint.
-       And, store information of all properties into DrawContext: previousPoint1 previousPoint2 midPoint
-       color lineWidth and Alpah.
+     This function uses the current touch point and the previous touch point to calculate the midpoint.
+     And, store information of all properties into DrawContext: previousPoint1 previousPoint2 midPoint
+     color lineWidth and Alpah.
      
-       - Parameter touches: A set of UITouch instances that represent the touches for the ending phase
+     - Parameter touches: A set of UITouch instances that represent the touches for the ending phase
                            of the event represented by event. For touches in a view, this set contains
                            only one touch by default. To receive multiple touches, you must set the view's
                            is Multiple TouchEnabled property to true.
      
-       - Parameter event: The event to which the touches belong.
+     - Parameter event: The event to which the touches belong.
      
-       - Returns: DrawContext with all properties listed in the core data.
+     - Returns: DrawContext with all properties listed in the core data.
      
      */
     func pointsInPath(_ touches: Set<UITouch>, with event: UIEvent?) -> DrawContext{
@@ -206,13 +206,13 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function calculate the mid point of given two point.
+     This function calculate the mid point of given two point.
      
-        - Parameter p1: The first point that is given.
+     - Parameter p1: The first point that is given.
      
-        - Parameter p2: The second point that is given.
+     - Parameter p2: The second point that is given.
      
-        - Returns: The mid point of the given two points.
+     - Returns: The mid point of the given two points.
      
      */
     func midPoint(p1: CGPoint, p2: CGPoint) -> CGPoint {
@@ -221,9 +221,9 @@ class ScratchPaperView: UIView{
     
     /**
      
-        ## Import Notes ##
-        1. Draw line across the mid1 point, mid2 point and the previousPoint1.
-        2. Set line properties: cruve stytle, lineCap and color.
+     ## Import Notes ##
+     1. Draw line across the mid1 point, mid2 point and the previousPoint1.
+     2. Set line properties: cruve stytle, lineCap and color.
      
      */
     override func draw( _ rect: CGRect) {
@@ -253,10 +253,10 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function set eraser color to the background color if eraser is enable and
-        newDrawingContext(touch point) color(RGB value) based on user selection.
+     This function set eraser color to the background color if eraser is enable and
+     newDrawingContext(touch point) color(RGB value) based on user selection.
      
-        - Parameter newDrawingContext: touch point with all properties that store in core data.
+     - Parameter newDrawingContext: touch point with all properties that store in core data.
      
      */
     func setContextColor(newDrawingContext: DrawContext ){
@@ -278,11 +278,11 @@ class ScratchPaperView: UIView{
     }
     
     /**
-         This function set lineWidth of newDrawingContext(touch point) based on user selection(numBrush).
+     This function set lineWidth of newDrawingContext(touch point) based on user selection(numBrush).
      
-         - Parameter newDrawingContext: touch point with all properties that store in core data.
+     - Parameter newDrawingContext: touch point with all properties that store in core data.
      
-         - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
+     - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
      
      */
     func setContextLineWidth(newDrawingContext: DrawContext ){
@@ -292,11 +292,11 @@ class ScratchPaperView: UIView{
     }
     
     /**
-         This function set alpah of newDrawingContext(touch point) based on user selection(numOpacity).
+     This function set alpah of newDrawingContext(touch point) based on user selection(numOpacity).
          
-         - Parameter newDrawingContext: touch point with all properties that store in core data.
+     - Parameter newDrawingContext: touch point with all properties that store in core data.
          
-         - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
+     - SeeAlso: 'setContextColor(newDrawingContext: DrawContext )'.
      
      */
     func setContextAlpah(newDrawingContext: DrawContext){
@@ -307,7 +307,7 @@ class ScratchPaperView: UIView{
     
         
     /**
-        This function save all draw context(all points) into the core data.
+     This function save all draw context(all points) into the core data.
      
     */
     func save(){
@@ -321,7 +321,7 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function load all draw context(all points) to the drawContextArray.
+     This function load all draw context(all points) to the drawContextArray.
      
      */
     func loadDrawingContext(){
@@ -340,7 +340,7 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function load all touch begin point to the touchBeginPointArray.
+     This function load all touch begin point to the touchBeginPointArray.
      
      */
     func loadTochBeginPoint(){
@@ -350,7 +350,7 @@ class ScratchPaperView: UIView{
         do{
             touchBeginPointArray = try context.fetch(request)
         }catch{
-            print("Error occurs when loading context\(error)")
+            print("Error occurs when loading TochBeginPoint context\(error)")
         }
     }
     
@@ -365,20 +365,19 @@ class ScratchPaperView: UIView{
         do{
             touchEndPointArray = try context.fetch(request)
         }catch{
-            print("Error occurs when loading context\(error)")
+            print("Error occurs when loading TochEndPoint context\(error)")
         }
     }
     
-    
     /**
-        This function perform the undo step and record the total number of undo times
+     This function perform the undo step and record the total number of undo times
      
-        ## Import Notes ##
-        1. Perfrom undo only if there is still have draw context in drawContextArray and touchBeginPointArray
-           is not empty(To make sure there is draw context in the page to perform undo)
-        2. Constantly remove the last point of the drawContextArray until it meet the last touch begin point
-           (Need to make sure drawContextArray is not empty)
-        3. Save last touch end point which use later in redo step
+     ## Import Notes ##
+     1. Perfrom undo only if there is still have draw context in drawContextArray and touchBeginPointArray
+        is not empty(To make sure there is draw context in the page to perform undo)
+     2. Constantly remove the last point of the drawContextArray until it meet the last touch begin point
+        (Need to make sure drawContextArray is not empty)
+     3. Save last touch end point which use later in redo step
      */
     func undo(){
 
@@ -420,14 +419,14 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function perform the redo step and record the total number of redo times
+     This function perform the redo step and record the total number of redo times
      
-         ## Import Notes ##
-         1. Perfrom redo only if there is still have draw context in undoRedoContextStack(all draw context pop out from the
-            undo step that save into this array) and redoTouchEndPointArray (touch end point)
-            is not empty(To make sure there is draw context in the page to perform undo)
-         2. Constantly remove the last point of the undoRedoContextStack until it meet the last touch end point
-            (Need to make sure redoTouchEndPointArray is not empty)
+     ## Import Notes ##
+     1. Perfrom redo only if there is still have draw context in undoRedoContextStack(all draw context pop out from the
+        undo step that save into this array) and redoTouchEndPointArray (touch end point)
+        is not empty(To make sure there is draw context in the page to perform undo)
+     2. Constantly remove the last point of the undoRedoContextStack until it meet the last touch end point
+        (Need to make sure redoTouchEndPointArray is not empty)
      */
     func redo(){
         
@@ -555,14 +554,14 @@ class ScratchPaperView: UIView{
 }
 
 /**
-    Extension to ScratchPaperView. More functionality may add into in the later version
+ Extension to ScratchPaperView. More functionality may add into in the later version
  */
 extension ScratchPaperView {
     
     /**
-        This function convert the ScratchPaperView into Images
+     This function convert the ScratchPaperView into Images
      
-        - Returns: Images that contain all user drawing
+     - Returns: Images that contain all user drawing
      */
     func asImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: self.bounds.size)
