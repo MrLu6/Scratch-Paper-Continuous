@@ -77,7 +77,7 @@ class ScratchPaperView: UIView{
 
             }
             
-            if touch.type == UITouchType.stylus  {
+            if touch.type == UITouch.TouchType.stylus  {
                 superView.isScrollEnabled = false
             
                 previousPoint1 = touch.location(in: self)
@@ -105,7 +105,7 @@ class ScratchPaperView: UIView{
         
         if let touch = touches.first {
             
-            if touch.type == UITouchType.stylus  {
+            if touch.type == UITouch.TouchType.stylus  {
                 
                    let newDrawingContext = pointsInPath(touches, with: event)
                 
@@ -137,7 +137,7 @@ class ScratchPaperView: UIView{
             let superView = self.superview as! UIScrollView
             superView.isScrollEnabled = false
             
-            if touch.type == UITouchType.stylus {
+            if touch.type == UITouch.TouchType.stylus {
                 
                 let newDrawingContext = pointsInPath(touches, with: event)
                 if !Attributes.instance.PAENL_IS_ON {
