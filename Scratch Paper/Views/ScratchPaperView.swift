@@ -470,8 +470,8 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function delete all the darw context including all touch begin point and end point and data store
-        in the core data.
+     This function delete all the darw context including all touch begin point and end point and data store
+     in the core data.
         
      */
     func deleteDrawingContext(){
@@ -528,11 +528,11 @@ class ScratchPaperView: UIView{
     }
     
     /**
-        This function save the current sate of drawing context before terminated
+     This function save the current sate of drawing context before terminated
      
-         ## Import Notes ##
-         1. Core data save everything of user drawing.
-         2. Need to perfrom all undo and redo again in order to comeback the latest state.
+     ## Import Notes ##
+     1. Core data save everything of user drawing.
+     2. Need to perfrom all undo and redo again in order to comeback the latest state.
     */
     func resetDrawContextBeforeTerminated() {
         
